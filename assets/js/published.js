@@ -1,12 +1,12 @@
 // Declare variables
-var currentDate = moment().format("DD/MM/YYYY, H:mm");
+var currentDate = moment().format("MM/DD/YYYY, H:mm");
 console.log("Current date/time is: " + currentDate);
 var postedEntries = JSON.parse(localStorage.getItem("postedEntries")) || [];
 console.log("postedEntries: ", postedEntries);
 
 // Create a card for each posted entry
 for (var i = 0; i < postedEntries.length; i++) {
-    var postedDate = moment(postedEntries[i].date).format("DD/MM/YYYY, H:mm");
+    var postedDate = moment(postedEntries[i].date).format("MM/DD/YYYY, H:mm");
     var daysAgo = moment(postedDate).fromNow();
     $('#publishedWork').append(`<div class="blogCard card bg-dark text-white ml-3 mr-3 mb-5 mx-auto col-xs-12 col-lg-6 w-auto">
     <img src="assets/images/hd-wallpaper-7091379_1920.jpg" class="card-img"

@@ -1,5 +1,5 @@
 // Declare global variables
-var currentDate = moment().format("DD/MM/YYYY, H:mm");
+var currentDate = moment().format("MM/DD/YYYY, H:mm");
 var count = 0;
 var lastClicked = new Date();
 
