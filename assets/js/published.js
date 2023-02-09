@@ -14,7 +14,7 @@ for (var i = 0; i < postedEntries.length; i++) {
     <div class="card-img-overlay" style="padding: 50px;">
     <h5 class="card-title">${postedDate}</h5>
         <p class="card-text">${postedEntries[i].content.substr(0, 256)}</p>
-        <button type="button" id="posted#${i}" class="readBtn btn btn-success mt-auto">Read more</button>
+        <button type="button" id="posted#${i}" class="readBtn btn btn-danger mt-auto">Read more</button>
     </div>
     <div class="card-footer text-muted small text-center">
         Posted ${daysAgo}
