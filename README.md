@@ -74,14 +74,21 @@ The app:
 
 
 ### Website demo
-The following image shows the web application's appearance and functionality:
+The following screenshots demonstrate the web application's appearance and functionality:
 
-![website demo](assets/img/web-apis-challenge-demo.gif)
+![website demo](assets/images/web_demo_home-page.jpg)
+![website demo](assets/images/web_demo_saved-page.jpg)
+![website demo](assets/images/web_demo_saved-page_draft.jpg)
+![website demo](assets/images/web_demo_published-page.jpg)
+![website demo](assets/images/web_demo_published-page_blog.jpg)
 
 
-## Elevator Pitch
+## Project documents
+- Proposal
 https://docs.google.com/document/d/1_e-iMsE5rRu6HXCnrnoc4OajT5UvslIOAEcLzokCVnM/edit?usp=sharing
 https://drive.google.com/file/d/1brsqEuIZ28dgOupK-QWiErJAWuNk4cC-/view?usp=sharing
+- Presentation
+
 
 ## Credits
 Sophie https://github.com/sophiedodsworth | Maciek https://github.com/manonthemon | Jingyue https://github.com/dr-jingyuezhao | Lisa https://github.com/LisaMLorenz
