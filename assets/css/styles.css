@@ -248,24 +248,16 @@ p.task {
     border-radius: 10px;
 }
 
-
 /* TEXT AREA */
-#text-container {
-    display: flex;
-    flex-direction: column;
- 
-}
 #text-area {
-
     align-items: center;
     display: flex;
     flex-direction: column;
+    display: block;
     margin: 50px;
-
 }
 
 #text-area-element {
-
     font-family: 'Caveat';
     font-size: 20pt;
     padding: 30px;
@@ -422,11 +414,11 @@ footer {
     display: inline-block;
     float: right;
     width: 60px;
-    height: 34px; 
+    height: 34px;
     margin-right: 10px;
-  }
+}
 
-  label {
+label {
     float: right;
     font-family: "IBM Plex Mono";
     color: var(--secondary-colour);
@@ -437,7 +429,7 @@ footer {
     justify-content: center;
     display: inline-block;
     padding-top: 8px;
-  }
+}
 
 /* Hide default HTML checkbox */
 .switch input {
