@@ -3,6 +3,10 @@ var currentDate = moment().format("DD/MM/YYYY, H:mm");
 var count = 0;
 var lastClicked = new Date();
 
+// API keys
+var giphyKey = "9LCWM6EiWKImfkX8M8PosGiWB6h1RYBi";
+var ninjaKey = "MrOJ+RzL8+j+w8TBKfz/tQ==4XpdDeYsI150v5z0";
+
 // Check the writing streak counter and display writing streak on home/start page
 $(document).ready(function () {
   let writingStreak = localStorage.getItem("writingStreak");
