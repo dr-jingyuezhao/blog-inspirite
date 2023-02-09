@@ -95,6 +95,7 @@ The following screenshots demonstrate the web application's appearance and funct
 https://docs.google.com/document/d/1_e-iMsE5rRu6HXCnrnoc4OajT5UvslIOAEcLzokCVnM/edit?usp=sharing
 https://drive.google.com/file/d/1brsqEuIZ28dgOupK-QWiErJAWuNk4cC-/view?usp=sharing
 - Presentation
+https://github.com/dr-jingyuezhao/blog-inspirite/tree/main/assets/docs/Inspirite_presentation-9-Feb-23
 
 
 ## Credits
