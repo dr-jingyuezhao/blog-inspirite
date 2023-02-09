@@ -36,6 +36,8 @@ function soundEffect() {
     '<input type="checkbox" id="soundToggle">' +
     '<span class="slider round"></span>' +
     '</label><label>Sound On/Off:</label>').insertAfter('#prompt-container');
+    $('#sound-toggle').css('display', 'block');
+
   // function to play sound on text area click
   const audio = new Audio('assets/sounds/writing_7s.mp3');
   document.getElementById("text-area").addEventListener("keydown", function () {
@@ -48,7 +50,7 @@ function soundEffect() {
 // Dynamically create/display a text writing field 
 // Add text input box, discard, save, and publish buttons
 function addTextArea() {
-  $("#text-container").removeClass("hide");
+  $("#text-area").removeClass("hide");
   //Creates a text area under writing prompt for user input
   var textArea = $('<textarea rows="8" class="col"></textarea>');
   textArea.attr("id", "text-area-element")
@@ -285,6 +287,7 @@ function save(inspiration) {
 function publish(inspiration) {
   $("#publish-button").click(function (event) {
     event.preventDefault();
+    $("#new-entry-container").removeClass("hide");
     // Add a modal to the PUBLISH button
     $('#publish-button').attr("data-toggle", "modal");
     $('#publish-button').attr("data-target", "#exampleModal-3");
