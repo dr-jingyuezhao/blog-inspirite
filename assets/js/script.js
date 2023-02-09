@@ -1,28 +1,10 @@
-//TODO 
-
-// Dynamically create a div for displaying the selected prompt from API
-
-// Dynamically create / unveil a text writing field. 
-
-// Add save and publish buttons once the user starts writing
-
-// The save button saves text to local storage
-
-// The publish buttons appends it to publication page and saves that page to local storage.
-
-// Create a page with grid of previously written stories. 
-
-//Each cell is a link to previously written story. 
-
-// Add streak counter - counts new day when publish button pressed, once a day.
-
-// Add notifications
-
-
+// Declare global variables
 var currentDate = moment().format("DD/MM/YYYY, H:mm");
+var count = 0;
+var lastClicked = new Date();
 
+// Check the writing streak counter and display writing streak on home/start page
 $(document).ready(function () {
-
   let writingStreak = localStorage.getItem("writingStreak");
   let lastClicked = localStorage.getItem("lastClicked");
   if (writingStreak === null) {
@@ -42,36 +24,10 @@ $(document).ready(function () {
   else if (writingStreak > 1) {
     $("#counter").text("Your current writing streak is " + writingStreak + " days");
   }
-
   else {
     $("#counter").text("Keep writing everyday!");
   }
 })
-
-
-// //^NOTIFICATIONS
-
-// if ("Notification" in window) {
-//   if (Notification.permission === "granted") {
-//     setInterval(function () {
-//       let notification = new Notification("Time to INSPIRITE", {
-//         body: "Get inspired and write something great today!",
-//         icon: "icon.png" //to be added
-//       });
-//     }, 1000 * 60 * 60 * 24);
-//   } else if (Notification.permission !== "denied") {
-//     Notification.requestPermission().then(function (permission) {
-//       if (permission === "granted") {
-//         setInterval(function () {
-//           let notification = new Notification("Time to INSPIRITE", {
-//             body: "Get inspired and write something great today!",
-//             icon: "icon.png" //to be added
-//           });
-//         }, 1000 * 60 * 60 * 24);
-//       }
-//     });
-//   }
-// }
 
 // Create a function to add sound
 function soundEffect() {
@@ -80,7 +36,6 @@ function soundEffect() {
     '<input type="checkbox" id="soundToggle">' +
     '<span class="slider round"></span>' +
     '</label><label>Sound On/Off:</label>').insertAfter('#prompt-container');
-
   // function to play sound on text area click
   const audio = new Audio('assets/sounds/writing_7s.mp3');
   document.getElementById("text-area").addEventListener("keydown", function () {
@@ -90,6 +45,7 @@ function soundEffect() {
   });
 }
 
+// Dynamically create/display a text writing field 
 // Add text input box, discard, save, and publish buttons
 function addTextArea() {
   $("#text-container").removeClass("hide");
@@ -118,16 +74,13 @@ function addTextArea() {
   $("#text-area").append(textButtonsContainer);
 }
 
-
-
+// Dynamically create a div for displaying the selected prompt from API when clicking a prompt button
 //QUOTES BUTTON
-//Buttons on click event
 $("#quote").on("click", function (event) {
   event.preventDefault();
   var promptCategory = this.id;
   console.log("prompt category: ", promptCategory);
-
-  //Launches Ajax call for quotes
+  //Launch Ajax call for quotes
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/quotes?category=',
@@ -166,14 +119,12 @@ $("#quote").on("click", function (event) {
   })
 });
 
-
-
 //FACTS BUTTON
 $("#fact").on("click", function (event) {
   event.preventDefault();
   var promptCategory = this.id;
   console.log("prompt category: ", promptCategory);
-
+  //Launch Ajax call for fun facts
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/facts?limit=1',
@@ -200,12 +151,12 @@ $("#fact").on("click", function (event) {
   })
 })
 
-
 //RANDOM IMAGE BUTTON
 $("#random-img").on("click", function (event) {
   event.preventDefault();
   var promptCategory = this.id;
   console.log("prompt category: ", promptCategory);
+  //Launch Ajax call for random image
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/randomimage?',
@@ -231,16 +182,13 @@ $("#random-img").on("click", function (event) {
   })
 })
 
-
 //GIF BUTTON
-var count = 0;
-var lastClicked = new Date();
-
 $("#gif").on("click", function (event) {
   event.preventDefault();
   var promptCategory = this.id;
   console.log("prompt category: ", promptCategory);
   var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + giphyKey; + "&rating=pg";
+  //Launch Ajax call for gifs
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -263,7 +211,7 @@ $("#gif").on("click", function (event) {
     });
 });
 
-// DISCARD BUTTON
+// DISCARD BUTTON: delete what's written in the text area
 // Create an event listener when clicking the discard button
 function discard() {
   $('#discard-button').on('click', function (event) {
@@ -295,7 +243,7 @@ function discard() {
   });
 }
 
-// SAVE BUTTON
+// SAVE BUTTON: the save button saves text to local storage
 // Create an event listener when clicking the save button
 function save(inspiration) {
   $('#save-button').on('click', function (event) {
@@ -333,23 +281,7 @@ function save(inspiration) {
   });
 }
 
-// function save() {
-//   $('#save-button').on('click', function (event) {
-//     event.preventDefault();
-//     console.log("save clicked");
-//     var currentDate = moment().format("DD/MM/YYYY, kk:mm");
-//     var savedEntries = JSON.parse(localStorage.getItem("savedEntries")) || [];
-//     console.log("savedEntries: ", savedEntries);
-//     savedEntries.push({
-//       date: currentDate,
-//       content: $("#text-area-element").val(),
-//     });
-//     console.log("new savedEntries", savedEntries)
-//     localStorage.setItem("savedEntries", JSON.stringify(savedEntries));
-//   });
-// }
-
-// PUBLISH BUTTON
+// PUBLISH BUTTON: the publish button appends the completed blog on page and saves to local storage.
 function publish(inspiration) {
   $("#publish-button").click(function (event) {
     event.preventDefault();
@@ -396,8 +328,8 @@ function publish(inspiration) {
   });
 }
 
+// Add streak counter - counts new day when publish button pressed, once a day.
 // COUNTER FUNCTION 
-
 function streakCounter() {
   let writingStreak = localStorage.getItem("writingStreak");
   let lastClicked = localStorage.getItem("lastClicked");
