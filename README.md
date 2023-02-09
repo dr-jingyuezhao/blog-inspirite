@@ -77,10 +77,17 @@ The app:
 The following screenshots demonstrate the web application's appearance and functionality:
 
 ![website demo](assets/images/web_demo_home-page.jpg)
-![website demo](assets/images/web_demo_saved-page.jpg)
+![website demo](assets/images/web_demo_quote-prompt.jpg)
+![website demo](assets/images/web_demo_fact-prompt.jpg)
+![website demo](assets/images/web_demo_img-prompt.jpg)
+![website demo](assets/images/web_demo_gif-prompt.jpg)
+![website demo](assets/images/web_demo_discard_modal.jpg)
+![website demo](assets/images/web_demo_save_modal.jpg)
+![website demo](assets/images/web_demo_publish_modal.jpg)
+![website demo](assets/images/web_demo_saved-page_2.jpg)
 ![website demo](assets/images/web_demo_saved-page_draft.jpg)
 ![website demo](assets/images/web_demo_published-page.jpg)
-![website demo](assets/images/web_demo_published-page_blog.jpg)
+![website demo](assets/images/web_demo_published-page_blog_2.jpg)
 
 
 ## Project documents
