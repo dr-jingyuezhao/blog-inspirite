@@ -86,7 +86,7 @@ The following screenshots demonstrate the web application's appearance and funct
 ![website demo](assets/images/web_demo_publish_modal.jpg)
 ![website demo](assets/images/web_demo_saved-page_2.jpg)
 ![website demo](assets/images/web_demo_saved-page_draft.jpg)
-![website demo](assets/images/web_demo_published-page.jpg)
+![website demo](assets/images/web_demo_published-page_2.jpg)
 ![website demo](assets/images/web_demo_published-page_blog_2.jpg)
 
 
