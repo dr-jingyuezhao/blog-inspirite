@@ -51,7 +51,7 @@ Used MomentJS to access current time stamp, retrieve information from Giphy and 
 Navbar, jumbotron, buttons, and cards from bootstrap are applied and customised for the app.
 
 ### Third-party and server-side APIs
-jQuery and Moment are used. Giphy, and APIs data are used for prompts. 
+jQuery and Moment are used. Giphy and ninja APIs data are used for prompts. 
 
 ## Installation
 The website can be accessed follwing the link to the application page:
