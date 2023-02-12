@@ -2,7 +2,7 @@
 A blogging platform with a creative writing twist
 
 ## Summary Description
-Inspirite offers the user a writing prompt in form of a randomly generated quote, image, fact, or GIF. The writing can be saved in the user's history page. A writing streak counter encourages the aspiring writer to hang in there and keep their writing pratice going.
+Inspirite offers the user a writing prompt in form of a randomly generated quote, image, fact, or GIF. The writing can be saved in the user's history and accessed on the saved writing page. Completed blogs can be accessed on the published work page. A writing streak counter encourages the aspiring writer to hang in there and keep their writing pratice going.
 
 - It serves a daily writing prompt to the user, to inspire them to write. The prompts can take the form of a quote, a fun fact, a GIF etc.
 
@@ -10,7 +10,7 @@ Inspirite offers the user a writing prompt in form of a randomly generated quote
 
 - It displays the number of consecutive days of use.
 
-- It stores user entries and allows for browsing of entries history.
+- It stores users' writing and allows for browsing of saved and published work.
 
 ## User story
 
@@ -38,11 +38,11 @@ How does the product solve that problem?
 - It stores previously written texts and lets the user search for specific tags.
 
 ## Technology
-### CSS
-Styling elements to buttons, cards, header, footer and jumbotron are applied.
-
 ### HTML
 Added links to Google Fonts, Bootstrap, links in the footer and Jumbotron. Added a second HTML file to store the user's record of daily writing submissions.
+
+### CSS
+Styling elements to buttons, cards, header, footer and jumbotron are applied.
 
 ### JavaScript
 Used MomentJS to access current time stamp, retrieve information from Giphy and Ninja API, as well as jQuery calls to dynamically create elements in DOM for randomly generated GIF, images, quotes and facts.
@@ -58,20 +58,10 @@ The website can be accessed follwing the link to the application page:
 https://dr-jingyuezhao.github.io/blog-inspirite/
 
 GitHub Repo: https://github.com/dr-jingyuezhao/blog-inspirite
-GitHub Pages: https://dr-jingyuezhao.github.io/blog-inspirite/
+GitHub Page: https://dr-jingyuezhao.github.io/blog-inspirite/
 
 ## Usage
-The app:
-* Use Bootstrap.
-* Be deployed to GitHub Pages.
-* Be interactive.
-* Use at least two server-side APIs.
-* Link to an external site.
-* Use modals instead of alerts, confirms, or prompts.
-* Use client-side storage to store persistent data.
-* Be responsive.
-* Have a polished UI.
-
+When opening the app in the browser, the user will be presented with the home page and asked to choose an inspiration. There are four buttons for generating different types of prompts: famous quote, fun fact, random picture, and gif surprise. The user can also click on the saved writing and published work link in the navbar to access the data in the local storage. After the user clicks on a button for a specific type of prompt, data from server API will be displayed on the top of the page based on the prompt type. A text input box will be generated below and the user can start writing. The user can switch on or off the sound effect while writing. When the user finishes writing, the user can delete, save, or publish the work by clicking each button. A modal will pop up to ask the user to confirm the action. When the user confirms to discard, the text in the input box will be deleted. When the user confirms to save or publish, the writing will be saved using localStorage in two different formats. The user can go to the saved writing page and click on a saved writing record to continue writing. The user can also go to the published work page and click on a published blog to retrieve the stored data and read more about that writing.
 
 ### Website demo
 The following screenshots demonstrate the web application's appearance and functionality:
